@@ -1,0 +1,19 @@
+{
+  "name": "@hexlet/code",
+  "version": "0.1.0",
+  "description": "hexlet fe project_1",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Deman4ig/frontend-project-lvl1.git"
+  },
+  "author": "Dmitry Fomin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Deman4ig/frontend-project-lvl1/issues"
+  },
+  "homepage": "https://github.com/Deman4ig/frontend-project-lvl1#readme"
+}
