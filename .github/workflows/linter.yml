@@ -1,0 +1,16 @@
+name: Run linter
+on:
+  push:
+    branches: [main]
+
+jobs:
+  linter:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Install all dependencies
+      run: echo "Installing dependencies" && make install
+    - name: Execute eslint
+      run: echo "Running eslint" && make lint
