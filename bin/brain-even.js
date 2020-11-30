@@ -1,6 +1,5 @@
 #!/usr/bin/env node
-import getUserName from '../src/cli.js';
-import brainEven from '../src/brainEven.js';
+import gameLauncher from '../src/index.js';
+import brainEvenRound from '../src/games/brainEvenRound.js';
 
-const userName = getUserName();
-brainEven(userName);
+gameLauncher(brainEvenRound);

@@ -1,20 +1,14 @@
 import readlineSync from 'readline-sync';
 
-const even = (num) => (num % 2 === 0);
+import isEven from '../utils/isEven.js';
+import validateResult from '../utils/validateResult.js';
 
-const brainEven = () => {
+export default () => {
+  console.log('Answer "yes" if the number is even, otherwise answer "no".');
   const number = Math.round(Math.random() * 100);
-  const answer = readlineSync.question(`Question: ${number} \nYour answer: `);
+  const userAnswer = readlineSync.question(`Question: ${number} \nYour answer: `);
 
-  const correctAnswer = (even(number)) ? 'yes' : 'no';
+  const correctAnswer = (isEven(number)) ? 'yes' : 'no';
 
-  if (answer === correctAnswer) {
-    console.log('Correct!');
-    return true;
-  }
-
-  console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
-  return false;
+  return validateResult(userAnswer, correctAnswer);
 };
-
-export default brainEven;

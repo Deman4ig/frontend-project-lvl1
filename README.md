@@ -7,4 +7,11 @@
 [![Actions Status](https://github.com/Deman4ig/frontend-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/Deman4ig/frontend-project-lvl1/actions)
 
 ### Demo:
-[![asciicast](https://asciinema.org/a/OTDX8MiRhE2nUaRafMRPZ96u8.svg)](https://asciinema.org/a/OTDX8MiRhE2nUaRafMRPZ96u8)
+#### Installation
+[![asciicast](https://asciinema.org/a/NnQpV3AaOOKHZ3fROEe8Ej87j.svg)](https://asciinema.org/a/NnQpV3AaOOKHZ3fROEe8Ej87j)
+
+#### Brain-even
+[![asciicast](https://asciinema.org/a/pVh4rx0yG3B8rzXgZTidFj8mz.svg)](https://asciinema.org/a/pVh4rx0yG3B8rzXgZTidFj8mz)
+
+#### Brain-calc
+[![asciicast](https://asciinema.org/a/XOayTwyQf8UPU0MvTN5gCTl7S.svg)](https://asciinema.org/a/XOayTwyQf8UPU0MvTN5gCTl7S)
