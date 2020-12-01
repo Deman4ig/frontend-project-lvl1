@@ -1,7 +1,7 @@
 ## Brain Games Project
 
 ![Run linter](https://github.com/Deman4ig/frontend-project-lvl1/workflows/Run%20linter/badge.svg)
-[![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/codeclimate/codeclimate/maintainability)
+[![Maintainability](https://api.codeclimate.com/v1/badges/177899a9d8f7109442ac/maintainability)](https://codeclimate.com/github/Deman4ig/frontend-project-lvl1/maintainability)
 
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/Deman4ig/frontend-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/Deman4ig/frontend-project-lvl1/actions)
