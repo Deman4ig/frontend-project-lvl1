@@ -1,12 +1,11 @@
 import readlineSync from 'readline-sync';
 
-import validateResult from '../utils/validateResult.js';
 import getRandomNumber from '../utils/getRandomNumber.js';
+import validateResult from '../utils/validateResult.js';
 
 const operatorList = ['+', '-', '*'];
 
-export default () => {
-  console.log('What is the result of the expression?');
+export const brainCalcRound = () => {
   const firstOperand = getRandomNumber(0, 100);
   const secondOperand = getRandomNumber(0, 100);
   const operatorID = getRandomNumber(0, (operatorList.length - 1));

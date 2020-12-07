@@ -1,13 +1,12 @@
 import readlineSync from 'readline-sync';
 
-import validateResult from '../utils/validateResult.js';
 import getRandomNumber from '../utils/getRandomNumber.js';
 import findGcd from '../utils/findGcd.js';
+import validateResult from '../utils/validateResult.js';
 
-export default () => {
-  console.log('Find the greatest common divisor of given numbers.');
-  const firstNumber = getRandomNumber(0, 100);
-  const secondNumber = getRandomNumber(0, 100);
+export const brainGcdRound = () => {
+  const firstNumber = getRandomNumber(1, 100);
+  const secondNumber = getRandomNumber(1, 100);
 
   const userAnswer = readlineSync.question(`Question: ${firstNumber} ${secondNumber} \nYour answer: `);
 
