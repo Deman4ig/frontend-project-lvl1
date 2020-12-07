@@ -5,8 +5,8 @@ const rules = {
   brainProgressionRound: 'Find the greatest common divisor of given numbers.',
   brainPrime: 'Answer "yes" if given number is prime. Otherwise answer "no".',
   brainGcdRound: 'Find the greatest common divisor of given numbers.',
-  brainCalcRound: 'What is the result of the expression?'
-}
+  brainCalcRound: 'What is the result of the expression?',
+};
 
 export default (game) => {
   const name = getUserName();
