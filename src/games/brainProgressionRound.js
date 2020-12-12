@@ -16,7 +16,7 @@ export const brainProgressionRound = () => {
   const firstNumber = getRandomNumber(0, 100);
   const commonDiff = getRandomNumber(1, 10);
   const progressionLength = getRandomNumber(5, 10);
-  const hiddenIndex = getRandomNumber(0, progressionLength);
+  const hiddenIndex = getRandomNumber(0, progressionLength - 1);
 
   const progression = getProgression(firstNumber, commonDiff, progressionLength);
   const correctAnswer = progression[hiddenIndex];
