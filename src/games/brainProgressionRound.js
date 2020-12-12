@@ -12,7 +12,7 @@ const getProgression = (firstNumber, increment, length) => {
   return progression;
 };
 
-export const brainProgressionRound = () => {
+const brainProgressionRound = () => {
   const firstNumber = getRandomNumber(0, 100);
   const commonDiff = getRandomNumber(1, 10);
   const progressionLength = getRandomNumber(5, 10);
@@ -25,3 +25,5 @@ export const brainProgressionRound = () => {
 
   return validateResult(Number(userAnswer), correctAnswer);
 };
+
+export default brainProgressionRound;

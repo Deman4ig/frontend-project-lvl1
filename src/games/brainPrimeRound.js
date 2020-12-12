@@ -15,7 +15,7 @@ const isPrime = (n) => {
   return true;
 };
 
-export const brainPrime = () => {
+const brainPrime = () => {
   const question = getRandomNumber(0, 100);
 
   const userAnswer = readlineSync.question(`Question: ${question} \nYour answer: `);
@@ -23,3 +23,5 @@ export const brainPrime = () => {
 
   return validateResult(userAnswer, correctAnswer);
 };
+
+export default brainPrime;

@@ -5,7 +5,7 @@ import validateResult from '../utils/validateResult.js';
 
 const findGcd = (a, b) => ((b) ? findGcd(b, a % b) : Math.abs(a));
 
-export const brainGcdRound = () => {
+const brainGcdRound = () => {
   const firstNumber = getRandomNumber(1, 100);
   const secondNumber = getRandomNumber(1, 100);
 
@@ -15,3 +15,5 @@ export const brainGcdRound = () => {
 
   return validateResult(Number(userAnswer), correctAnswer);
 };
+
+export default brainGcdRound;
