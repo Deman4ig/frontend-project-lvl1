@@ -1,8 +1,9 @@
 import readlineSync from 'readline-sync';
 
 import getRandomNumber from '../utils/getRandomNumber.js';
-import isEven from '../utils/isEven.js';
 import validateResult from '../utils/validateResult.js';
+
+const isEven = (num) => (num % 2 === 0);
 
 export const brainEvenRound = () => {
   const number = getRandomNumber(0, 100);

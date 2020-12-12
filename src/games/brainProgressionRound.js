@@ -1,8 +1,16 @@
 import readlineSync from 'readline-sync';
 
 import getRandomNumber from '../utils/getRandomNumber.js';
-import getProgression from '../utils/getProgression.js';
 import validateResult from '../utils/validateResult.js';
+
+const getProgression = (firstNumber, increment, length) => {
+  const progression = [firstNumber];
+  do {
+    progression.push(progression[progression.length - 1] + increment);
+  } while (progression.length < length);
+
+  return progression;
+};
 
 export const brainProgressionRound = () => {
   const firstNumber = getRandomNumber(0, 100);

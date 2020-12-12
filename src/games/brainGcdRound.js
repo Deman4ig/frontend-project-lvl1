@@ -1,8 +1,9 @@
 import readlineSync from 'readline-sync';
 
 import getRandomNumber from '../utils/getRandomNumber.js';
-import findGcd from '../utils/findGcd.js';
 import validateResult from '../utils/validateResult.js';
+
+const findGcd = (a, b) => ((b) ? findGcd(b, a % b) : Math.abs(a));
 
 export const brainGcdRound = () => {
   const firstNumber = getRandomNumber(1, 100);
