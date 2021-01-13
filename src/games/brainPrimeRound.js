@@ -3,6 +3,8 @@ import readlineSync from 'readline-sync';
 import getRandomNumber from '../utils/getRandomNumber.js';
 import validateResult from '../utils/validateResult.js';
 
+export const gameDescription = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+
 const isPrime = (n) => {
   if (Number.isNaN(n) || !Number.isFinite(n) || n % 1 || n < 2) return false;
   if (n % 2 === 0) return (n === 2);

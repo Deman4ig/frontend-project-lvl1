@@ -1,11 +1,11 @@
 import getUserName from './cli.js';
-import printRules from './gameRules.js';
+// import printRules from './gameRules.js';
 
 const gameRounds = 3;
 
-export default (game) => {
+export default (game, gameDescription) => {
   const name = getUserName();
-  printRules(game.name);
+  console.log(gameDescription);
   for (let count = 0; count < gameRounds; count += 1) {
     const result = game();
     if (!result) {

@@ -3,6 +3,8 @@ import readlineSync from 'readline-sync';
 import getRandomNumber from '../utils/getRandomNumber.js';
 import validateResult from '../utils/validateResult.js';
 
+export const gameDescription = 'What is the result of the expression?';
+
 const operatorList = {
   '+': (a, b) => a + b,
   '-': (a, b) => a - b,

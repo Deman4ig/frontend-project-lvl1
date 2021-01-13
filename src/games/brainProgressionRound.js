@@ -3,6 +3,8 @@ import readlineSync from 'readline-sync';
 import getRandomNumber from '../utils/getRandomNumber.js';
 import validateResult from '../utils/validateResult.js';
 
+export const gameDescription = 'What number is missing in the progression?';
+
 const getProgression = (firstNumber, increment, length) => {
   const progression = [firstNumber];
   do {

@@ -3,6 +3,8 @@ import readlineSync from 'readline-sync';
 import getRandomNumber from '../utils/getRandomNumber.js';
 import validateResult from '../utils/validateResult.js';
 
+export const gameDescription = 'Find the greatest common divisor of given numbers.';
+
 const findGcd = (a, b) => ((b) ? findGcd(b, a % b) : Math.abs(a));
 
 const brainGcdRound = () => {
