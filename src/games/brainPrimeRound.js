@@ -1,7 +1,4 @@
-import readlineSync from 'readline-sync';
-
 import getRandomNumber from '../utils/getRandomNumber.js';
-import validateResult from '../utils/validateResult.js';
 
 export const gameDescription = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
@@ -18,12 +15,12 @@ const isPrime = (n) => {
 };
 
 const brainPrime = () => {
-  const question = getRandomNumber(0, 100);
+  const randomNumber = getRandomNumber(0, 100);
 
-  const userAnswer = readlineSync.question(`Question: ${question} \nYour answer: `);
+  const question = `Question: ${randomNumber} \nYour answer: `;
   const correctAnswer = (isPrime(question)) ? 'yes' : 'no';
 
-  return validateResult(userAnswer, correctAnswer);
+  return { question, correctAnswer };
 };
 
 export default brainPrime;

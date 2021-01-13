@@ -1,7 +1,4 @@
-import readlineSync from 'readline-sync';
-
 import getRandomNumber from '../utils/getRandomNumber.js';
-import validateResult from '../utils/validateResult.js';
 
 export const gameDescription = 'What is the result of the expression?';
 
@@ -18,9 +15,10 @@ const brainCalcRound = () => {
   const mathFunction = [...Object.values(operatorList)];
   const operatorID = getRandomNumber(0, (operators.length - 1));
 
-  const correctAnswer = mathFunction[operatorID](firstOperand, secondOperand);
-  const userAnswer = readlineSync.question(`Question: ${firstOperand} ${operators[operatorID]} ${secondOperand} \nYour answer: `);
-  return validateResult(Number(userAnswer), correctAnswer);
+  const correctAnswer = mathFunction[operatorID](firstOperand, secondOperand).toString();
+  const question = `Question: ${firstOperand} ${operators[operatorID]} ${secondOperand} \nYour answer: `;
+
+  return { question, correctAnswer };
 };
 
 export default brainCalcRound;

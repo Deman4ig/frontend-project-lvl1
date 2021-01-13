@@ -1,7 +1,4 @@
-import readlineSync from 'readline-sync';
-
 import getRandomNumber from '../utils/getRandomNumber.js';
-import validateResult from '../utils/validateResult.js';
 
 export const gameDescription = 'What number is missing in the progression?';
 
@@ -21,11 +18,11 @@ const brainProgressionRound = () => {
   const hiddenIndex = getRandomNumber(0, progressionLength - 1);
 
   const progression = getProgression(firstNumber, commonDiff, progressionLength);
-  const correctAnswer = progression[hiddenIndex];
+  const correctAnswer = progression[hiddenIndex].toString();
   progression[hiddenIndex] = '..';
-  const userAnswer = readlineSync.question(`Question: ${progression.join(' ')} \nYour answer: `);
+  const question = `Question: ${progression.join(' ')} \nYour answer: `;
 
-  return validateResult(Number(userAnswer), correctAnswer);
+  return { question, correctAnswer };
 };
 
 export default brainProgressionRound;
