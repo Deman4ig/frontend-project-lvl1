@@ -1,4 +1,4 @@
-import getRandomNumber from '../utils/getRandomNumber.js';
+import getRandomNumber from '../getRandomNumber.js';
 
 export const gameDescription = 'Answer "yes" if the number is even, otherwise answer "no".';
 const isEven = (num) => (num % 2 === 0);
