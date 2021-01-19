@@ -5,9 +5,9 @@ const isEven = (num) => (num % 2 === 0);
 
 const runBrainEvenRound = () => {
   const roundQuestion = getRandomNumber(0, 100);
-  const correctRoundAnswer = (isEven(roundQuestion)) ? 'yes' : 'no';
+  const roundAnswer = (isEven(roundQuestion)) ? 'yes' : 'no';
 
-  return { roundQuestion, correctRoundAnswer };
+  return { roundQuestion, roundAnswer };
 };
 
 export default runBrainEvenRound;

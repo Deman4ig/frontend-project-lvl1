@@ -8,9 +8,9 @@ const runBrainGcdRound = () => {
   const firstNumber = getRandomNumber(1, 100);
   const secondNumber = getRandomNumber(1, 100);
   const roundQuestion = `${firstNumber} ${secondNumber}`;
-  const correctRoundAnswer = findGcd(firstNumber, secondNumber);
+  const roundAnswer = findGcd(firstNumber, secondNumber);
 
-  return { roundQuestion, correctRoundAnswer };
+  return { roundQuestion, roundAnswer };
 };
 
 export default runBrainGcdRound;

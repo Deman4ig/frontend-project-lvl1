@@ -15,10 +15,10 @@ const runBrainCalcRound = () => {
   const mathFunction = [...Object.values(mathOperations)];
   const operatorID = getRandomNumber(0, (operators.length - 1));
 
-  const correctRoundAnswer = mathFunction[operatorID](firstOperand, secondOperand);
+  const roundAnswer = mathFunction[operatorID](firstOperand, secondOperand);
   const roundQuestion = `${firstOperand} ${operators[operatorID]} ${secondOperand}`;
 
-  return { roundQuestion, correctRoundAnswer };
+  return { roundQuestion, roundAnswer };
 };
 
 export default runBrainCalcRound;

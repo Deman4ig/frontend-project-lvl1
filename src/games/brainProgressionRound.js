@@ -17,10 +17,10 @@ const runBrainProgressionRound = () => {
       progression.push('..');
     }
   }
-  const correctRoundAnswer = firstNumber + commonDiff * hiddenIndex;
+  const roundAnswer = firstNumber + commonDiff * hiddenIndex;
   const roundQuestion = `${progression.join(' ')}`;
 
-  return { roundQuestion, correctRoundAnswer };
+  return { roundQuestion, roundAnswer };
 };
 
 export default runBrainProgressionRound;

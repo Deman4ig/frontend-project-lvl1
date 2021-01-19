@@ -19,9 +19,9 @@ const isPrime = (num) => {
 
 const runBrainPrimeRound = () => {
   const roundQuestion = getRandomNumber(0, 100);
-  const correctRoundAnswer = (isPrime(roundQuestion)) ? 'yes' : 'no';
+  const roundAnswer = (isPrime(roundQuestion)) ? 'yes' : 'no';
 
-  return { roundQuestion, correctRoundAnswer };
+  return { roundQuestion, roundAnswer };
 };
 
 export default runBrainPrimeRound;

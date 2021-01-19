@@ -13,13 +13,13 @@ export default (game, gameDescription) => {
   console.log(gameDescription);
 
   for (let count = 0; count < gameRoundsCount; count += 1) {
-    const { roundQuestion, correctRoundAnswer } = game();
+    const { roundQuestion, roundAnswer } = game();
 
     console.log(`Question: ${roundQuestion}`);
     const userAnswer = getUserAnswer();
 
-    if (userAnswer !== correctRoundAnswer.toString()) {
-      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctRoundAnswer}'.`);
+    if (userAnswer !== roundAnswer.toString()) {
+      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${roundAnswer}'.`);
       console.log(`Let's try again, ${name}!`);
       return;
     }
