@@ -15,7 +15,7 @@ const brainCalcRound = () => {
   const mathFunction = [...Object.values(operatorList)];
   const operatorID = getRandomNumber(0, (operators.length - 1));
 
-  const correctAnswer = mathFunction[operatorID](firstOperand, secondOperand).toString();
+  const correctAnswer = mathFunction[operatorID](firstOperand, secondOperand);
   const question = `Question: ${firstOperand} ${operators[operatorID]} ${secondOperand} \nYour answer: `;
 
   return { question, correctAnswer };

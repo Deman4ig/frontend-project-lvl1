@@ -18,7 +18,7 @@ const brainPrime = () => {
   const randomNumber = getRandomNumber(0, 100);
 
   const question = `Question: ${randomNumber} \nYour answer: `;
-  const correctAnswer = (isPrime(question)) ? 'yes' : 'no';
+  const correctAnswer = (isPrime(randomNumber)) ? 'yes' : 'no';
 
   return { question, correctAnswer };
 };
