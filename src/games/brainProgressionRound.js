@@ -2,7 +2,7 @@ import getRandomNumber from '../getRandomNumber.js';
 
 export const gameDescription = 'What number is missing in the progression?';
 
-const getProgression = (firstNumber, increment, length) => {
+const genProgression = (firstNumber, increment, length) => {
   const progression = [firstNumber];
   do {
     progression.push(progression[progression.length - 1] + increment);
@@ -11,13 +11,14 @@ const getProgression = (firstNumber, increment, length) => {
   return progression;
 };
 
-const brainProgressionRound = () => {
+const runBrainProgressionRound = () => {
   const firstNumber = getRandomNumber(0, 100);
   const commonDiff = getRandomNumber(1, 10);
   const progressionLength = getRandomNumber(5, 10);
   const hiddenIndex = getRandomNumber(0, progressionLength - 1);
 
-  const progression = getProgression(firstNumber, commonDiff, progressionLength);
+  const progression = genProgression(firstNumber, commonDiff, progressionLength);
+
   const correctRoundAnswer = progression[hiddenIndex];
   progression[hiddenIndex] = '..';
   const roundQuestion = `${progression.join(' ')}`;
@@ -25,4 +26,4 @@ const brainProgressionRound = () => {
   return { roundQuestion, correctRoundAnswer };
 };
 
-export default brainProgressionRound;
+export default runBrainProgressionRound;
