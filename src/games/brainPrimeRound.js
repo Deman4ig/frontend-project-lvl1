@@ -15,12 +15,10 @@ const isPrime = (n) => {
 };
 
 const brainPrime = () => {
-  const randomNumber = getRandomNumber(0, 100);
+  const roundQuestion = getRandomNumber(0, 100);
+  const correctRoundAnswer = (isPrime(roundQuestion)) ? 'yes' : 'no';
 
-  const question = `Question: ${randomNumber} \nYour answer: `;
-  const correctAnswer = (isPrime(randomNumber)) ? 'yes' : 'no';
-
-  return { question, correctAnswer };
+  return { roundQuestion, correctRoundAnswer };
 };
 
 export default brainPrime;

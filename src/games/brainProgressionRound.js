@@ -18,11 +18,11 @@ const brainProgressionRound = () => {
   const hiddenIndex = getRandomNumber(0, progressionLength - 1);
 
   const progression = getProgression(firstNumber, commonDiff, progressionLength);
-  const correctAnswer = progression[hiddenIndex].toString();
+  const correctRoundAnswer = progression[hiddenIndex];
   progression[hiddenIndex] = '..';
-  const question = `Question: ${progression.join(' ')} \nYour answer: `;
+  const roundQuestion = `${progression.join(' ')}`;
 
-  return { question, correctAnswer };
+  return { roundQuestion, correctRoundAnswer };
 };
 
 export default brainProgressionRound;

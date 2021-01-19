@@ -3,16 +3,20 @@ import getUserName from './cli.js';
 
 const gameRounds = 3;
 
+const getUserAnswer = () => readlineSync.question('Your answer: ');
+
 export default (game, gameDescription) => {
   console.log('Welcome to the Brain Games!');
   const name = getUserName();
   console.log(gameDescription);
   for (let count = 0; count < gameRounds; count += 1) {
-    const { question, correctAnswer } = game();
-    const userAnswer = readlineSync.question(question);
+    const { roundQuestion, correctRoundAnswer } = game();
 
-    if (userAnswer !== correctAnswer.toString()) {
-      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
+    console.log(`Question: ${roundQuestion}`);
+    const userAnswer = getUserAnswer();
+
+    if (userAnswer !== correctRoundAnswer.toString()) {
+      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctRoundAnswer}'.`);
       console.log(`Let's try again, ${name}!`);
       return;
     }
