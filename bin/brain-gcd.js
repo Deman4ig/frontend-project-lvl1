@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-import gameLauncher from '../src/index.js';
-import brainGcdRound, { gameDescription } from '../src/games/brainGcdRound.js';
+import runGcdGame from '../src/games/gcdGame.js';
 
-gameLauncher(brainGcdRound, gameDescription);
+runGcdGame();

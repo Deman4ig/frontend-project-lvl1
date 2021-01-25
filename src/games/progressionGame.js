@@ -1,8 +1,9 @@
 import getRandomNumber from '../getRandomNumber.js';
+import runGame from '../gameEngine.js';
 
-export const gameDescription = 'What number is missing in the progression?';
+const gameDescription = 'What number is missing in the progression?';
 
-const runBrainProgressionRound = () => {
+const progressionGame = () => {
   const firstNumber = getRandomNumber(0, 100);
   const commonDiff = getRandomNumber(1, 10);
   const progressionLength = getRandomNumber(5, 10);
@@ -18,9 +19,11 @@ const runBrainProgressionRound = () => {
     }
   }
   const roundAnswer = firstNumber + commonDiff * hiddenIndex;
-  const roundQuestion = `${progression.join(' ')}`;
+  const roundQuestion = progression.join(' ');
 
   return { roundQuestion, roundAnswer };
 };
 
-export default runBrainProgressionRound;
+const runProgressionGame = () => runGame(progressionGame, gameDescription);
+
+export default runProgressionGame;

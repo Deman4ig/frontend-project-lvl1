@@ -1,6 +1,7 @@
 import getRandomNumber from '../getRandomNumber.js';
+import runGame from '../gameEngine.js';
 
-export const gameDescription = 'What is the result of the expression?';
+const gameDescription = 'What is the result of the expression?';
 
 const mathOperations = {
   '+': (a, b) => a + b,
@@ -8,17 +9,19 @@ const mathOperations = {
   '*': (a, b) => a * b,
 };
 
-const runBrainCalcRound = () => {
+const calculatorGame = () => {
   const firstOperand = getRandomNumber(0, 100);
   const secondOperand = getRandomNumber(0, 100);
   const operators = [...Object.keys(mathOperations)];
-  const mathFunction = [...Object.values(mathOperations)];
+  const mathOperation = [...Object.values(mathOperations)];
   const operatorID = getRandomNumber(0, (operators.length - 1));
 
-  const roundAnswer = mathFunction[operatorID](firstOperand, secondOperand);
+  const roundAnswer = mathOperation[operatorID](firstOperand, secondOperand);
   const roundQuestion = `${firstOperand} ${operators[operatorID]} ${secondOperand}`;
 
   return { roundQuestion, roundAnswer };
 };
 
-export default runBrainCalcRound;
+const runCalcGame = () => runGame(calculatorGame, gameDescription);
+
+export default runCalcGame;

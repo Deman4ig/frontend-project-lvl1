@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-import gameLauncher from '../src/index.js';
-import brainPrime, { gameDescription } from '../src/games/brainPrimeRound.js';
+import runPrimeNumberGame from '../src/games/primeNumberGame.js';
 
-gameLauncher(brainPrime, gameDescription);
+runPrimeNumberGame();

@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-import gameLauncher from '../src/index.js';
-import brainProgressionRound, { gameDescription } from '../src/games/brainProgressionRound.js';
+import runProgressionGame from '../src/games/progressionGame.js';
 
-gameLauncher(brainProgressionRound, gameDescription);
+runProgressionGame();

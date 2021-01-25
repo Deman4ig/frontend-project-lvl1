@@ -1,10 +1,11 @@
 import getRandomNumber from '../getRandomNumber.js';
+import runGame from '../gameEngine.js';
 
-export const gameDescription = 'Find the greatest common divisor of given numbers.';
+const gameDescription = 'Find the greatest common divisor of given numbers.';
 
 const findGcd = (a, b) => ((b) ? findGcd(b, a % b) : Math.abs(a));
 
-const runBrainGcdRound = () => {
+const gcdGame = () => {
   const firstNumber = getRandomNumber(1, 100);
   const secondNumber = getRandomNumber(1, 100);
   const roundQuestion = `${firstNumber} ${secondNumber}`;
@@ -13,4 +14,6 @@ const runBrainGcdRound = () => {
   return { roundQuestion, roundAnswer };
 };
 
-export default runBrainGcdRound;
+const runGcdGame = () => runGame(gcdGame, gameDescription);
+
+export default runGcdGame;

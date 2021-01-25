@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-import gameLauncher from '../src/index.js';
-import brainEvenRound, { gameDescription } from '../src/games/brainEvenRound.js';
+import runEvenNumberGame from '../src/games/evenNumberGame.js';
 
-gameLauncher(brainEvenRound, gameDescription);
+runEvenNumberGame();
