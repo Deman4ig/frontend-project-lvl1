@@ -4,7 +4,7 @@ const gameRoundsCount = 3;
 
 const getUserAnswer = (question) => readlineSync.question(question);
 
-const gameEngine = (game, gameDescription) => {
+export default (game, gameDescription) => {
   console.log('Welcome to the Brain Games!');
   const name = getUserAnswer('May I have your name? ');
   console.log(`Hello, ${name}!`);
@@ -27,5 +27,3 @@ const gameEngine = (game, gameDescription) => {
 
   console.log(`Congratulations, ${name}!`);
 };
-
-export default gameEngine;
