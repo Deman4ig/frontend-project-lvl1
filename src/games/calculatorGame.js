@@ -16,7 +16,7 @@ const calculatorGame = () => {
   const mathOperation = [...Object.values(mathOperations)];
   const operatorID = getRandomNumber(0, (operators.length - 1));
 
-  const roundAnswer = mathOperation[operatorID](firstOperand, secondOperand).toString();
+  const roundAnswer = (mathOperation[operatorID](firstOperand, secondOperand)).toString();
   const roundQuestion = `${firstOperand} ${operators[operatorID]} ${secondOperand}`;
 
   return { roundQuestion, roundAnswer };
