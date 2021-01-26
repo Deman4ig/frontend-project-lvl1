@@ -9,7 +9,7 @@ const gcdGame = () => {
   const firstNumber = getRandomNumber(1, 100);
   const secondNumber = getRandomNumber(1, 100);
   const roundQuestion = `${firstNumber} ${secondNumber}`;
-  const roundAnswer = findGcd(firstNumber, secondNumber);
+  const roundAnswer = findGcd(firstNumber, secondNumber).toString();
 
   return { roundQuestion, roundAnswer };
 };

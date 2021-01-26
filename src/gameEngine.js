@@ -17,7 +17,7 @@ export default (game, gameDescription) => {
     console.log(`Question: ${roundQuestion}`);
     const userAnswer = getUserAnswer('Your answer: ');
 
-    if (userAnswer !== roundAnswer.toString()) {
+    if (userAnswer !== roundAnswer) {
       console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${roundAnswer}'.`);
       console.log(`Let's try again, ${name}!`);
       return;

@@ -9,17 +9,17 @@ const progressionGame = () => {
   const progressionLength = getRandomNumber(5, 10);
   const hiddenIndex = getRandomNumber(0, progressionLength - 1);
 
-  const progression = [];
+  const roundTask = [];
 
   for (let i = 0; i < progressionLength; i += 1) {
     if (i !== hiddenIndex) {
-      progression.push(firstNumber + commonDiff * i);
+      roundTask.push(firstNumber + commonDiff * i);
     } else {
-      progression.push('..');
+      roundTask.push('..');
     }
   }
-  const roundAnswer = firstNumber + commonDiff * hiddenIndex;
-  const roundQuestion = progression.join(' ');
+  const roundAnswer = (firstNumber + commonDiff * hiddenIndex).toString();
+  const roundQuestion = roundTask.join(' ');
 
   return { roundQuestion, roundAnswer };
 };
