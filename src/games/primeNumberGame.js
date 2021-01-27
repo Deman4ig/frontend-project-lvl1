@@ -15,13 +15,13 @@ const isPrime = (num) => {
   return true;
 };
 
-const primeNumberGame = () => {
+const execPrimeNumberGame = () => {
   const roundQuestion = getRandomNumber(0, 100);
   const roundAnswer = (isPrime(roundQuestion)) ? 'yes' : 'no';
 
   return { roundQuestion, roundAnswer };
 };
 
-const runPrimeNumberGame = () => runGame(primeNumberGame, gameDescription);
+const runPrimeNumberGame = () => runGame(execPrimeNumberGame, gameDescription);
 
 export default runPrimeNumberGame;
