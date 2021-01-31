@@ -9,17 +9,17 @@ const createProgressionTask = () => {
   const progressionLength = getRandomNumber(5, 10);
   const hiddenIndex = getRandomNumber(0, progressionLength - 1);
 
-  const roundTask = [];
+  const progression = [];
 
   for (let i = 0; i < progressionLength; i += 1) {
     if (i !== hiddenIndex) {
-      roundTask.push(firstNumber + commonDiff * i);
+      progression.push(firstNumber + commonDiff * i);
     } else {
-      roundTask.push('..');
+      progression.push('..');
     }
   }
   const roundAnswer = (firstNumber + commonDiff * hiddenIndex).toString();
-  const roundQuestion = roundTask.join(' ');
+  const roundQuestion = progression.join(' ');
 
   return { roundQuestion, roundAnswer };
 };
