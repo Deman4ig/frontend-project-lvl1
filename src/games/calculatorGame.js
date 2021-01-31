@@ -9,7 +9,7 @@ const mathOperations = {
   '*': (a, b) => a * b,
 };
 
-const execCalculatorGame = () => {
+const createCalculatorTask = () => {
   const firstOperand = getRandomNumber(0, 100);
   const secondOperand = getRandomNumber(0, 100);
   const operators = [...Object.keys(mathOperations)];
@@ -22,6 +22,6 @@ const execCalculatorGame = () => {
   return { roundQuestion, roundAnswer };
 };
 
-const runCalcGame = () => runGame(execCalculatorGame, gameDescription);
+const runCalcGame = () => runGame(createCalculatorTask, gameDescription);
 
 export default runCalcGame;

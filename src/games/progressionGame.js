@@ -3,7 +3,7 @@ import runGame from '../gameEngine.js';
 
 const gameDescription = 'What number is missing in the progression?';
 
-const execProgressionGame = () => {
+const createProgressionTask = () => {
   const firstNumber = getRandomNumber(0, 100);
   const commonDiff = getRandomNumber(1, 10);
   const progressionLength = getRandomNumber(5, 10);
@@ -24,6 +24,6 @@ const execProgressionGame = () => {
   return { roundQuestion, roundAnswer };
 };
 
-const runProgressionGame = () => runGame(execProgressionGame, gameDescription);
+const runProgressionGame = () => runGame(createProgressionTask, gameDescription);
 
 export default runProgressionGame;
